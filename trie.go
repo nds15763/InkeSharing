@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type (
 	Char = rune
 	Trie map[Char]Trie
@@ -52,15 +50,15 @@ func dfs(t Trie, prefix []Char, suggestions []string) []string {
 	return suggestions
 }
 
-func main() {
-	dict := make(Trie)
-	dict.AddString("go")
-	dict.AddString("golang")
-	dict.AddString("by")
+// func main() {
+// 	dict := make(Trie)
+// 	dict.AddString("go")
+// 	dict.AddString("golang")
+// 	dict.AddString("by")
 
-	exsist := dict.ExistPrefix("golang")
-	fmt.Println(exsist)
+// 	exsist := dict.ExistPrefix("golang")
+// 	fmt.Println(exsist)
 
-	relist := dict.Suggest("go")
-	fmt.Println(relist)
-}
+// 	relist := dict.Suggest("go")
+// 	fmt.Println(relist)
+// }
